@@ -39,4 +39,16 @@ public class MenuService {
         return menuList;
 
     }
+
+    public MenuDTO selectMenubyCode(int code) {
+
+        // 세션 열어주기
+        SqlSession sqlSession = getSqlSession();
+
+        MenuDTO menu = menuDAO.selectMenuByCode(sqlSession, code);
+
+        sqlSession.close();
+
+        return menu;
+    }
 }

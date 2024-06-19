@@ -19,4 +19,8 @@ public class PrintResult {
         }
         System.out.println(errorMessage);
     }
+
+    public void printMenu(MenuDTO menu) {
+        System.out.println(menu);
+    }
 }
